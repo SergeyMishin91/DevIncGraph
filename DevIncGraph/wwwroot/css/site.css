@@ -1,0 +1,120 @@
+﻿body {
+    font-family: Verdana, sans-serif
+}
+
+div.mainTask {
+    margin: 0 auto;
+    width: 800px;
+    /*background-color: #ff66cc*/
+}
+
+table {
+    border-collapse: collapse; /*убираем пустые промежутки между ячейками*/
+    border: 1px solid black; /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
+
+}
+
+th, td {
+    border: 1px solid grey;
+}
+
+.form-control {
+    width: 30px;
+    height: 23px;
+}
+
+.form-control input.empty_field {
+    border-width: 2px;
+    border-color: red;
+}
+
+#left, #right {
+    width: 340px;
+    margin-top: 30px;
+    float: left
+}
+
+#left {
+    padding: 30px 20px 30px 40px;
+    text-align: right
+}
+
+#right {
+    padding: 30px 40px 30px 20px
+}
+
+#header h2 {
+    padding-top: 47px
+}
+
+ul.nav {
+    display: block;
+    margin: 0;
+    padding: 0 0 0 91px;
+    list-style-type: none
+}
+
+    ul.nav li {
+        background-color: #660033;
+        display: inline;
+        padding: 0
+    }
+
+#button {
+    margin-left: 140px;
+    /*position: relative;*/
+    /*display: inline-block;*/
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    /*user-select: none;*/
+    margin: .5em;
+    padding: .5em .6em .4em .6em;
+    border-radius: 8px;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    /*outline: none;*/
+    background: blue radial-gradient(rgba(255,255,255,0), rgba(255,255,255,.5));
+    box-shadow: inset rgba(255,255,255,.6) 0 .3em .3em, inset rgba(0,0,0,.2) 0 -.1em .3em, blue 0 7px 1px, rgba(0,0,0,.2) 0 .5em 5px;
+    /*transition: background .2s ease-in-out;*/
+}
+
+a:link {
+    color: #cccccc
+}
+
+a:visited {
+    color: #ffffff
+}
+
+.text-danger {
+    color: #dc3545 !important;
+}
+
+a.text-danger:hover, a.text-danger:focus {
+    color: #bd2130 !important;
+}
+/*.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}*/

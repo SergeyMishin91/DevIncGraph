@@ -1,0 +1,132 @@
+﻿@model IndexViewModel
+
+@{
+    //var XLabels = Newtonsoft.Json.JsonConvert.SerializeObject(Model.Points.Select(x => x?.PointX).ToList());
+    //var YValues = Newtonsoft.Json.JsonConvert.SerializeObject(Model.Points.Select(x => x?.PointY).ToList());
+    ViewData["Title"] = "Index";
+    Layout = "_Layout";
+}
+
+
+<div class="mainTask">
+    <div id="header">
+        <h2 align="center">Test task</h2>
+    </div>
+    <div id="left">
+        <h3 style="text-align:center">Graph</h3>
+        <div class="box-body">
+
+            <div class="chart-container">
+                <canvas id="chart" style="width:100%; height:500px"></canvas>
+                @*<script>
+                        var ctx = document.getElementById('chart');
+                        var myChart = new Chart(ctx, {
+                            type: 'line',
+                            data: {
+                                labels: @Html.Raw(XLabels),
+                                datasets: [{
+                                    label: 'Point values',
+                                    data: @Html.Raw(YValues),
+                                    fill: false,
+                                    borderColor: "blue",
+                                    lineTension: 0.1
+                                }]
+                            },
+                            options: {
+                                scales: {
+                                    yAxes: [{
+                                        ticks: {
+                                            //stepSize: 5,
+                                            beginAtZero: true
+                                        }
+                                    }],
+                                    xAxes: [{
+                                        ticks: {
+                                            stepSize: 5,
+                                            //beginAtZero: true
+                                        }
+                                    }]
+                                }
+                            }
+                        });
+                </script>*@
+            </div>
+        </div>
+    </div>
+    <div id="right">
+        <h3 style="text-align:center">Formula</h3>
+        <form asp-action="Index" asp-controller="Home" method="post">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label>Function: </label>
+                        </td>
+                        <td>
+                            <label class="function-label">y=</label>
+                            <input type="text" name="a" class="form-control"
+                                   placeholder="5">
+                            <div>
+                                <span asp-validation-for="UserData.A" class="text-danger"></span>
+                            </div>
+                            <label class="function-label">^2 + </label>
+                            <input type="text" name="b" class="form-control"
+                                   placeholder="5">
+                            @*<div>
+                                    <span asp-validation-for="UserData.b" class="text-danger"></span>
+                                </div>*@
+                            <label class="function-label">x + </label>
+                            <input type="text" name="c" class="form-control"
+                                   placeholder="16">
+                            @*<div>
+                                    <span asp-validation-for="UserData.c" class="text-danger"></span>
+                                </div>*@
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Step: </label>
+                        </td>
+                        <td>
+                            <input type="text" name="step" class="form-control"
+                                   placeholder="1">
+                            @*<div>
+                                    <span asp-validation-for="UserData.step" class="text-danger"></span>
+                                </div>*@
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>From: </label>
+                        </td>
+                        <td>
+                            <input type="text" name="from" class="form-control"
+                                   placeholder="-10">
+                            @*<div>
+                                    <span asp-validation-for="UserData.RangeFrom" class="text-danger"></span>
+                                </div>*@
+                            <label> to </label>
+                            <input type="text" name="to" class="form-control"
+                                   placeholder="10">
+                            @*<div>
+                                    <span asp-validation-for="UserData.RangeTo" class="text-danger"></span>
+                                </div>*@
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            <input type="submit" id="button" name="plot" value="Plot" style="text-align:center"/>
+        </form>
+    </div>
+</div>
+
+
