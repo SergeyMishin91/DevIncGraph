@@ -1,8 +1,8 @@
 ﻿@model IndexViewModel
 
 @{
-    //var XLabels = Newtonsoft.Json.JsonConvert.SerializeObject(Model.Points.Select(x => x?.PointX).ToList());
-    //var YValues = Newtonsoft.Json.JsonConvert.SerializeObject(Model.Points.Select(x => x?.PointY).ToList());
+    var XLabels = Newtonsoft.Json.JsonConvert.SerializeObject(Model.Points.Select(x => x?.PointX).ToList());
+    var YValues = Newtonsoft.Json.JsonConvert.SerializeObject(Model.Points.Select(x => x?.PointY).ToList());
     ViewData["Title"] = "Index";
     Layout = "_Layout";
 }
@@ -18,7 +18,7 @@
 
             <div class="chart-container">
                 <canvas id="chart" style="width:100%; height:500px"></canvas>
-                @*<script>
+                <script>
                         var ctx = document.getElementById('chart');
                         var myChart = new Chart(ctx, {
                             type: 'line',
@@ -49,7 +49,7 @@
                                 }
                             }
                         });
-                </script>*@
+                </script>
             </div>
         </div>
     </div>

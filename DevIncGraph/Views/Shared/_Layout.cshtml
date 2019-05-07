@@ -17,24 +17,19 @@
         @RenderBody()
     </div>
 </body>
-
 </html>
-@section scripts
-    {
-    <script type="text/javascript">
-        $('document').ready(function () {
-            $('#button').on('click', function () {
-                $('#right .form-control').each(function () {
-                    if ($(this).val() != '') {
-                        // Если поле не пустое удаляем класс-указание
-                        $(this).removeClass('empty_field');
-                    } else {
-                        // Если поле пустое добавляем класс-указание
-                        $(this).addClass('empty_field');
-                    }
-                });
+
+<script type="text/javascript">
+    $('document').ready(function () {
+        $('#button').on('click', function () {
+            $('#right .form-control').each(function () {
+                if ($(this).val() != '') {
+                    $(this).removeClass('empty_field');
+                } else {
+                    $(this).addClass('empty_field');
+                }
             });
         });
+    });
 
-    </script>
-}
+</script>
